@@ -1,0 +1,85 @@
+//
+//  WF.pch
+//  WF
+//
+//  Created by 陈诚 on 2018/7/3.
+//  Copyright © 2018年 chen cheng. All rights reserved.
+//
+
+#ifndef WF_pch
+#define WF_pch
+
+#import <AVOSCloud/AVOSCloud.h>
+
+
+//LBXScan
+#define LBXScan_Define_ZXing   //包含ZXing库
+#define LBXScan_Define_UI     //包含界面库
+
+
+
+//获取屏幕宽高
+#define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
+#define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+
+
+
+
+//强弱引用
+
+#define kWeakSelf(type)__weak typeof(type)weak##type = type;
+
+#define kStrongSelf(type)__strong typeof(type)type = weak##type;
+
+//-------------------打印日志-------------------------
+
+//DEBUG模式下打印日志,当前行
+
+#ifdef DEBUG
+
+#define DLog(fmt,...)NSLog((@"%s[Line %d]" fmt),__PRETTY_FUNCTION__,__LINE__,##__VA_ARGS__);
+
+#else
+
+#define DLog(...)
+
+#endif
+
+
+//----------------------ABOUT COLOR 颜色相关 ----------------------------
+#define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
+#define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]
+
+/** 全局默认绿色 */
+#define NormalColor RGBACOLOR(150,247,254,1)
+
+/** 全局默认黄色 */
+#define NormalYellowColor RGBCOLOR(249,244,55)
+
+
+
+
+/** 设备是否为iPhone 5C/5/5S 分辨率320x568，像素640x1136，@2x */
+#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+
+/** 设备是否为iPhone 6 分辨率375x667，像素750x1334，@2x */
+#define iPhone6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : NO)
+
+/** 设备是否为iPhone 6 Plus 分辨率414x736，像素1242x2208，@3x */
+#define iPhone6P ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size) : NO)
+
+
+// 判断是否是iPhone X
+#define iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+// 状态栏高度
+#define STATUS_BAR_HEIGHT (iPhoneX ? 44.f : 20.f)
+// 导航栏高度
+#define NAVIGATION_BAR_HEIGHT (iPhoneX ? 88.f : 64.f)
+// tabBar高度
+#define TAB_BAR_HEIGHT (iPhoneX ? (49.f+34.f) : 49.f)
+// home indicator
+#define HOME_INDICATOR_HEIGHT (iPhoneX ? 34.f : 0.f)
+
+
+
+#endif /* WF_pch */

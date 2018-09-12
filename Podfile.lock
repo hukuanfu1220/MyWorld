@@ -1,0 +1,32 @@
+PODS:
+  - AVOSCloud (11.2.2)
+  - AVOSCloudIM (11.2.2):
+    - AVOSCloud (= 11.2.2)
+    - AVOSCloudIM/_ARC (= 11.2.2)
+    - AVOSCloudIM/_NOARC (= 11.2.2)
+  - AVOSCloudIM/_ARC (11.2.2):
+    - AVOSCloud (= 11.2.2)
+    - AVOSCloudIM/_NOARC (= 11.2.2)
+  - AVOSCloudIM/_NOARC (11.2.2):
+    - AVOSCloud (= 11.2.2)
+  - IQKeyboardManager (6.1.0)
+
+DEPENDENCIES:
+  - AVOSCloud
+  - AVOSCloudIM
+  - IQKeyboardManager
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AVOSCloud
+    - AVOSCloudIM
+    - IQKeyboardManager
+
+SPEC CHECKSUMS:
+  AVOSCloud: 5dac17ca0e33dad232372564f3d3d175443c943f
+  AVOSCloudIM: f0a8918c87b368a710c1db01ff4546c31940d993
+  IQKeyboardManager: f520b0f411eaefa08058532cb50c48bfeffa8535
+
+PODFILE CHECKSUM: d6b52ae220ee12516ad38189897dad491a41507a
+
+COCOAPODS: 1.5.3
