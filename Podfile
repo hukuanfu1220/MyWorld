@@ -8,7 +8,11 @@ target 'MyWorld' do
 pod 'AVOSCloud'               # 数据存储、短信、云引擎调用等基础服务模块
 pod 'AVOSCloudIM'
 pod "IQKeyboardManager" 
-
+pod 'Masonry'
+pod 'SDWebImage'
+pod "AFNetworking"
+pod "SDCycleScrollView"
+pod "SVProgressHUD"
 
   # Pods for MyWorld
 

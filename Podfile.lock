@@ -1,4 +1,19 @@
 PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
   - AVOSCloud (11.2.2)
   - AVOSCloudIM (11.2.2):
     - AVOSCloud (= 11.2.2)
@@ -10,23 +25,45 @@ PODS:
   - AVOSCloudIM/_NOARC (11.2.2):
     - AVOSCloud (= 11.2.2)
   - IQKeyboardManager (6.1.0)
+  - Masonry (1.1.0)
+  - SDCycleScrollView (1.75):
+    - SDWebImage (>= 4.0.0)
+  - SDWebImage (4.4.1):
+    - SDWebImage/Core (= 4.4.1)
+  - SDWebImage/Core (4.4.1)
+  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
+  - AFNetworking
   - AVOSCloud
   - AVOSCloudIM
   - IQKeyboardManager
+  - Masonry
+  - SDCycleScrollView
+  - SDWebImage
+  - SVProgressHUD
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - AFNetworking
     - AVOSCloud
     - AVOSCloudIM
     - IQKeyboardManager
+    - Masonry
+    - SDCycleScrollView
+    - SDWebImage
+    - SVProgressHUD
 
 SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   AVOSCloud: 5dac17ca0e33dad232372564f3d3d175443c943f
   AVOSCloudIM: f0a8918c87b368a710c1db01ff4546c31940d993
   IQKeyboardManager: f520b0f411eaefa08058532cb50c48bfeffa8535
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
+  SDWebImage: 47e9b5b925cbce75946c23f0c42dd19464189af4
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: d6b52ae220ee12516ad38189897dad491a41507a
+PODFILE CHECKSUM: 60d7c908e5e53cbe776666b1479b569c3c60a67f
 
 COCOAPODS: 1.5.3
